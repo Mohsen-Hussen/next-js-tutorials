@@ -30,15 +30,7 @@ export async function getServerSideProps(context) {
 		query,
 		params: { category },
 	} = context;
-	console.log(
-		"🚀 ~ file: [category].js:32 ~ getServerSideProps ~ req:",
-		req.headers.cookie
-	);
 	res.setHeader("Set-Cookie", ["name=Mohsen"]);
-	console.log(
-		"🚀 ~ file: [category].js:33 ~ getServerSideProps ~ query:",
-		query
-	);
 	const response = await fetch(
 		`http://localhost:4000/news?category=${category}`
 	);

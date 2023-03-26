@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import React from "react";
 import styles from "../styles/About.module.css";
 
@@ -11,3 +12,12 @@ const About = () => {
 };
 
 export default About;
+
+About.getLayout = function PageLayout(page) {
+	return (
+		<>
+			{page}
+			<Footer />
+		</>
+	);
+};
